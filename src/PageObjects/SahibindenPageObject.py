@@ -67,6 +67,7 @@ class Sahibinden:
 
             print('listing complete!')
             if self.driverHelper.CheckIfElementExistsByXpath(StaticPageElements.nextPageButton):
+                time.sleep(2)
                 self.GoToNextPage()
             else:
                 break
