@@ -37,4 +37,4 @@ class DriverHelper:
 
     def CheckIfElementExistsByXpath(self, elementToCheckXpath):
         elementList = self.driver.find_elements_by_xpath(elementToCheckXpath)
-        return len(elementList > 0)
+        return len(elementList) > 0
