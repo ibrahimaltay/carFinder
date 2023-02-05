@@ -36,5 +36,9 @@ class DriverHelper:
         ActionChains(self.driver).move_to_element(elementToScroll).perform()
 
     def CheckIfElementExistsByXpath(self, elementToCheckXpath):
-        elementList = self.driver.find_elements_by_xpath(elementToCheckXpath)
+        elementList = self.driver.find_elements(by='xpath', value=elementToCheckXpath)
         return len(elementList) > 0
+
+    def ForceClickOnElementByXpath(self, elementToClickXPath):
+        element = self.driver.find_element(By.XPATH, elementToClickXPath)
+        self.driver.execute_script("arguments[0].click();", element)

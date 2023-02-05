@@ -14,3 +14,9 @@ dateColumn = "//td[@class='searchResultsDateValue']"
 locationColumn = "//td[@class='searchResultsLocationValue']"
 urlAnchor = "//a[contains(@class, 'classifiedTitle')]"
 
+sahibinden_logo = "//a[@href='https://www.sahibinden.com']"
+feature_discovery_elements = "//div[contains(@class, 'feature-discovery')]"
+feature_discovery_overlay = "//div[@class='feature-discovery feature-discovery--visible']"
+header_container = "//div[contains(@class, 'header-container')]"
+
+
