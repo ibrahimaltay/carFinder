@@ -7,9 +7,11 @@ import src.PageElements.GenericPageElements as GenericPageElements
 import src.Helpers.DriverHelper as DriverHelper
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as ChromeOptions
+import chromedriver_autoinstaller
 
 
 class Sahibinden:
+
 
     def __init__(self, searchUrl):
         self.searchUrl = searchUrl
@@ -26,9 +28,10 @@ class Sahibinden:
         self.driver.close()
 
     def CreateDriver(self):
+        chromedriver_autoinstaller.install()
         options = ChromeOptions()
         options.add_argument('--no-sandbox')
-        driver = webdriver.Chrome(options=options, executable_path="bin/drivers/linux/chromedriver")
+        driver = webdriver.Chrome(options=options)
         driver.maximize_window()
         self.driver = driver
 
@@ -85,8 +88,6 @@ class Sahibinden:
                                                                                    str(colors[i]),str(prices[i]),
                                                                                    str(dates[i]), str(locations[i]),
                                                                                    str(urls[i])])
-
-
 
             if self.driverHelper.CheckIfElementExistsByXpath(StaticPageElements.nextPageButton):
                 self.GoToNextPage()

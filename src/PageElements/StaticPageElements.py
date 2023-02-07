@@ -5,7 +5,7 @@ nextPageButton = "//a[@class='prevNextBut' and @title='Sonraki']"
 
 allListings = "//tr[@data-id and contains(@class, 'searchResultsItem')]"
 modelColumn = "//td[@class='searchResultsTagAttributeValue']"
-titleColumn = "//td[@class='searchResultsTitleValue leafContent']"
+titleColumn = "//td[contains(@class, 'searchResultsTitleValue ')]"
 yearColumn = "//td[@class='searchResultsAttributeValue'][1]"
 kilometerColumn = "//td[@class='searchResultsAttributeValue'][2]"
 colorColumn = "//td[@class='searchResultsAttributeValue'][3]"
